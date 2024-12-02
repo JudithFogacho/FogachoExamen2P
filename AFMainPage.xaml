@@ -28,12 +28,12 @@
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="AF_Convertir"
                     Clicked="OnConvertClicked"
-                    Background="#DA70D6"
+                    Background="#35aa1d"
                     TextColor="White"/>
             
             <Button Grid.Column="1"
                     Text="Limpiar"
-                    Background="#eea393"
+                    Background="#ea310a"
                     Clicked="DeleteButton_Clicked" />
         </Grid>
         
