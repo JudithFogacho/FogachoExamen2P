@@ -16,5 +16,14 @@ namespace FogachoExamen2P.Models
             { (AFTipoMoneda.AF_COP, AFTipoMoneda.AF_USD), 0.00022M},
             { (AFTipoMoneda.AF_COP, AFTipoMoneda.AF_EUR), 0.00021M }
         };
+        public decimal Conversion(AFTipoMoneda from, AFTipoMoneda to, decimal amount) {
+            if (from == to) {
+                return amount; 
+            }
+            if (exchangeRates.TryGetValue((from, to), out var rate)) { 
+                return amount * rate;
+            }
+            throw new KeyNotFoundException("El cambio no ha sido encontrado");
+        }
     }
 }

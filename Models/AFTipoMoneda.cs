@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FogachoExamen2P.Models
 {
-    internal enum AFTipoMoneda
+    public enum AFTipoMoneda
     {
         AF_COP, 
         AF_USD,
