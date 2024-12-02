@@ -7,18 +7,17 @@
                 JustifyContent="Start"
                 AlignItems="Stretch"
                 Padding="20">
-        
+
         <Label Text="Ingrese la cantidad a convertir:"
                FontAttributes="Bold"/>
-        
-        <Entry x:Name="FromCurrencyPicker"
+        <Entry x:Name="AmountEntry"
                Keyboard="Numeric"
                Placeholder="Cantidad"
                WidthRequest="200"/>
         
         <Label Text="Seleccione la moneda de origen"
                 FontAttributes="Bold"/>
-        <Picker x:Name="MonedaOrigen"
+        <Picker x:Name="FromCurrencyPicker"
                 WidthRequest="200"/>
 
         <Label Text="Seleccione la moneda de destino"
