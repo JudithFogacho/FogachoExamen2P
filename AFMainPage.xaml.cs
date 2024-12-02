@@ -41,6 +41,14 @@ namespace FogachoExamen2P
             }
 
         }
+
+        private void DeleteButton_Clicked(object sender, EventArgs e)
+        {
+            AmountEntry.Text = string.Empty;
+            FromCurrencyPicker.SelectedItem = null;
+            ToCurrencyPicker.SelectedItem = null;
+            ResultLabel.Text = string.Empty;
+        }
     }
 
 }

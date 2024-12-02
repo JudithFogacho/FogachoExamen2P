@@ -25,17 +25,22 @@
         <Picker x:Name="ToCurrencyPicker"
                 WidthRequest="200"/>
 
-        <Button Text="AF_Convertir"
-                Clicked="OnConvertClicked"
-                Background="#DA70D6"
-                TextColor="White"
-                WidthRequest="200"
-                HorizontalOptions="Center"/>
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Text="AF_Convertir"
+                    Clicked="OnConvertClicked"
+                    Background="#DA70D6"
+                    TextColor="White"/>
+            
+            <Button Grid.Column="1"
+                    Text="Limpiar"
+                    Background="#eea393"
+                    Clicked="DeleteButton_Clicked" />
+        </Grid>
+        
 
         <Label x:Name="ResultLabel"
-               FontSize="18"
-               HorizontalOptions="Center"/>
-
+           FontSize="18"
+           HorizontalOptions="Center"/>
 
     </FlexLayout>
 
