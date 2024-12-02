@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FogachoExamen2P.MainPage">
+             x:Class="FogachoExamen2P.AFMainPage">
 
     <FlexLayout Direction="Column"
                 JustifyContent="Start"
-                AlignItems="Stretch"
+                AlignItems="Center"
                 Padding="20">
 
         <Label Text="Ingrese la cantidad a convertir:"
@@ -27,7 +27,7 @@
 
         <Button Text="AF_Convertir"
                 Clicked="OnConvertClicked"
-                Background="DarkCyan"
+                Background="#DA70D6"
                 TextColor="White"
                 WidthRequest="200"
                 HorizontalOptions="Center"/>

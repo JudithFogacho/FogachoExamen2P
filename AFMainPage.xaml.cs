@@ -3,25 +3,26 @@ using Microsoft.VisualBasic;
 
 namespace FogachoExamen2P
 {
-    public partial class MainPage : ContentPage
+    public partial class AFMainPage : ContentPage
     {
         private readonly AFConversion conversion = new ();
-        public MainPage()
+        public AFMainPage()
         {
             InitializeComponent();
-            //InitializePickers();
+            InitializePickers();
 
         }
         private void InitializePickers() {
-            var currencies = Enum.GetValues(typeof(AFTipoMoneda));
+            var currencies = Enum.GetValues(typeof(AFTipoMoneda)).Cast<AFTipoMoneda>().Select(c => c.ToString()).ToList();
             FromCurrencyPicker.ItemsSource = currencies;
             ToCurrencyPicker.ItemsSource = currencies;
         }
 
         private void OnConvertClicked(object sender, EventArgs e)
         {
-            if (decimal.TryParse(AmountEntry.Text, out decimal amount) && FromCurrencyPicker.SelectedItem is AFTipoMoneda fromCurrency
-                && ToCurrencyPicker.SelectedItem is AFTipoMoneda toCurrency)
+            if (decimal.TryParse(AmountEntry.Text, out decimal amount) && 
+                Enum.TryParse(FromCurrencyPicker.SelectedItem?.ToString(), out AFTipoMoneda fromCurrency) &&
+                Enum.TryParse(ToCurrencyPicker.SelectedItem?.ToString(), out AFTipoMoneda toCurrency))
             {
                 try
                 {
